@@ -147,6 +147,18 @@ i.fa-solid.fa-location-dot {
   padding-right: 5px;
   padding: 10px;
 }
+/*---Section Filtres----*/
+* .Filtrebar {
+  display: flex;
+  flex-direction: row;
+}
+.directionRow a {
+  display: flex;
+  border: solid 2px rgb(190, 188, 188);
+  border-radius: 30px;
+  align-items: center;
+  gap: 15px;
+}
 
 /****** Hebergements ***********/
 .hebergements {
