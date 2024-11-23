@@ -55,6 +55,7 @@ a {
 .information {
   display: flex;
   align-items: center; /* Alignement vertical */
+  margin: 20px 0px;
 }
 
 .icon {
@@ -125,7 +126,7 @@ i.fa-solid.fa-location-dot {
   width: 50px;
   height: 49px;
   border-radius: 50% 0 0 50%;
-  background-color: var(--filter-bg-color);
+  background-color: #f2f2f2;
   align-items: center;
   justify-content: center;
   color: black;
@@ -237,10 +238,6 @@ i.fa-solid.fa-location-dot {
 }
 
 /*------ACTIVITEES----------*/
-/*.Activites {
-  display: flex;
-  width: 100%;
-}*/
 .Activites-cards img {
   display: flex;
   width: 297px;
