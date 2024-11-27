@@ -112,6 +112,7 @@ a {
   background-color: var(--main-bg-color);
   border-radius: 20px;
   padding: 30px;
+  margin-bottom: 35px;
   box-sizing: border-box;
 }
 /********FILTRES************/
@@ -179,7 +180,7 @@ i.fa-solid.fa-location-dot {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   margin-top: 29px;
 }
 .hebergements-cards a {
@@ -206,6 +207,7 @@ i.fa-solid.fa-location-dot {
 .populaires-cards .card {
   display: flex;
   margin-top: 33px;
+  margin-bottom: 50px;
 }
 
 .populaires-cards img {
@@ -222,6 +224,7 @@ i.fa-solid.fa-location-dot {
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
+  gap: 15px;
 }
 
 .populaires-cards .card-title {
@@ -270,10 +273,10 @@ i.fa-solid.fa-location-dot {
   background-color: var(--main-bg-color);
 }
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
+/* Le code ci-dessous correspond à la version responsive uniquement------------ */
 
 /****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
+/* Medium devices (tablets, less/equal than 1024px) ---TABLETTES---*/
 @media (max-width: 1024px) {
   .hebergements-and-populaires {
     flex-direction: column;
@@ -305,9 +308,107 @@ i.fa-solid.fa-location-dot {
   .populaires-cards .card-subtitle {
     font-size: 13px;
   }
+  .Activites-cards {
+    display: flex;
+    flex-direction: row; /* Conserver l'alignement en ligne */
+    justify-content: space-between; /* Espacer uniformément les cartes */
+    overflow-x: auto; /* Ajouter un défilement horizontal si nécessaire */
+    gap: 15px; /* Ajouter un espacement entre les cartes */
+  }
+
+  .Activites-cards a {
+    flex: 1 1 calc(25% - 15px); /* Chaque carte occupe 25% de la largeur moins le gap */
+    max-width: 25%; /* Empêche les cartes de dépasser 25% */
+    text-align: center; /* Centrer le contenu textuel */
+  }
+
+  .Activites-cards img {
+    width: 100%; /* Les images remplissent la largeur de leurs conteneurs */
+    height: 250px; /* Fixer une hauteur identique pour toutes les images */
+    object-fit: cover; /* Recadre l'image pour qu'elle remplisse le conteneur */
+    border-radius: 10px; /* Coins arrondis pour l’esthétique */
+  }
+
+  .Activites h2 {
+    font-size: 1.6rem; /* Ajuster la taille du titre */
+    margin: 10px 15px; /* Réduire les marges */
+  }
+
+  .Activites-cards .card-title {
+    font-size: 1rem; /* Réduire légèrement la taille des titres */
+    margin-top: 10px; /* Ajouter un peu d’espace au-dessus */
+  }
+  h3 .card-title {
+    display: flex;
+    padding-bottom: 18px;
+  }
 }
 
-/* Small devices (phones, less than 768px) */
+/* ----------------Small devices (phones, less than 768px)------PHONES---------------- */
 @media (max-width: 767.98px) {
-  /* ... */
+  .filtre2 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .hebergements-and-populaires {
+    width: 375px;
+  }
+  .populaires {
+    width: 100%; /* Utilise toute la largeur de l'écran */
+    padding: 10px; /* Ajout d'un padding pour une meilleure lisibilité */
+  }
+
+  .populaires-title {
+    flex-direction: column; /* Les éléments passent en colonne */
+    align-items: flex-start; /* Aligne le titre et l'icône à gauche */
+    gap: 10px; /* Ajout d'un espacement entre les éléments */
+  }
+
+  .populaires-cards {
+    display: flex;
+    flex-direction: column; /* Empile les cartes verticalement */
+    gap: 20px; /* Ajoute de l'espacement entre les cartes */
+  }
+
+  .populaires-cards .card {
+    flex-direction: column; /* Chaque carte est en colonne */
+    align-items: center; /* Centrer le contenu de chaque carte */
+  }
+
+  .populaires-cards img {
+    width: 100%; /* L'image occupe toute la largeur disponible */
+    height: auto; /* Maintient les proportions de l'image */
+    border-radius: 15px; /* Coins légèrement arrondis */
+  }
+
+  .populaires-cards .card-content {
+    width: 100%; /* Le contenu occupe toute la largeur */
+    padding: 10px; /* Ajoute un espacement interne */
+    text-align: center; /* Centrer le texte pour une meilleure présentation */
+  }
+
+  .populaires-cards .card-title {
+    font-size: 1.2rem; /* Réduit légèrement la taille du titre */
+    margin: 10px 0; /* Ajoute de l'espace autour du titre */
+  }
+
+  .populaires-cards .card-subtitle {
+    font-size: 1rem; /* Ajuste la taille pour une lecture facile */
+    margin-bottom: 10px; /* Espacement sous le sous-titre */
+  }
+
+  .populaires-cards .card-rating {
+    margin-top: 10px; /* Espace au-dessus des étoiles */
+  }
+  .hebergements-cards {
+    justify-content: center;
+  }
+  .Activites-cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
 }
