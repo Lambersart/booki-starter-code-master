@@ -70,7 +70,7 @@ a {
 }
 
 .icon i {
-  color: #0065fc; /* Couleur de l'icône */
+  color: #0065fc;
   font-size: 14px; /* Taille de l'icône */
 }
 
@@ -149,12 +149,15 @@ i.fa-solid.fa-location-dot {
   padding-right: 5px;
   padding: 10px;
 }
+.loupe {
+  display: none; /* Par défaut caché */
+}
 /*---Filtres2----*/
 .filtre2 {
   display: flex;
   flex-direction: row;
   margin-top: 15px;
-  gap: 15px;
+  gap: 6px;
   align-items: center;
 }
 .filtre2 a {
@@ -167,6 +170,7 @@ i.fa-solid.fa-location-dot {
   padding: 10px 14px;
   font-size: 16px;
   font-weight: bold;
+  min-width: 115px;
 }
 .filtre2 :hover {
   background-color: #deebff;
@@ -250,6 +254,7 @@ i.fa-solid.fa-location-dot {
 }
 .Activites-cards a {
   margin-bottom: 30px;
+  min-height: 270px;
 }
 .Activites-cards {
   display: flex;
@@ -258,9 +263,7 @@ i.fa-solid.fa-location-dot {
   flex-direction: row;
   margin-top: 35px;
 }
-.Activites-cards .card-title {
-  margin-left: 15px;
-}
+
 .Activites h2 {
   margin: 20px 0 -10px 20px;
 }
@@ -273,7 +276,7 @@ i.fa-solid.fa-location-dot {
   background-color: var(--main-bg-color);
 }
 
-/* Le code ci-dessous correspond à la version responsive uniquement------------ */
+/* Le code ci-dessous correspond à la version responsive uniquement------------ ----------------------*/
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) ---TABLETTES---*/
@@ -310,8 +313,8 @@ i.fa-solid.fa-location-dot {
   }
   .Activites-cards {
     display: flex;
-    flex-direction: row; /* Conserver l'alignement en ligne */
-    justify-content: space-between; /* Espacer uniformément les cartes */
+    flex-direction: row;
+    justify-content: space-between;
     overflow-x: auto; /* Ajouter un défilement horizontal si nécessaire */
     gap: 15px; /* Ajouter un espacement entre les cartes */
   }
@@ -327,6 +330,9 @@ i.fa-solid.fa-location-dot {
     height: 250px; /* Fixer une hauteur identique pour toutes les images */
     object-fit: cover; /* Recadre l'image pour qu'elle remplisse le conteneur */
     border-radius: 10px; /* Coins arrondis pour l’esthétique */
+  }
+  .Activites-cards article.card {
+    height: 312px;
   }
 
   .Activites h2 {
@@ -346,49 +352,129 @@ i.fa-solid.fa-location-dot {
 
 /* ----------------Small devices (phones, less than 768px)------PHONES---------------- */
 @media (max-width: 767.98px) {
+  .main-container {
+    padding: 15px;
+  }
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav-menu ul {
+    width: 100%;
+    padding: 0;
+    gap: 190px;
+  }
+  .nav-menu li {
+    padding-bottom: 16px;
+    width: 50%;
+  }
+  .nav-menu li :hover {
+    border-bottom: 2px solid var(--main-color);
+    border-top: none;
+  }
+  .entete h1 {
+    display: flex;
+    height: 52px;
+    width: 320px;
+  }
+  .entete p {
+    font-size: small;
+  }
+  .search_button {
+    display: none; /* Cacher le bouton texte */
+  }
+  .loupe {
+    display: inline-block;
+  }
+  .loupe i {
+    color: white;
+  }
+
   .filtre2 {
     display: flex;
     flex-wrap: wrap;
   }
-  .hebergements-and-populaires {
-    width: 375px;
-  }
-  .populaires {
-    width: 100%; /* Utilise toute la largeur de l'écran */
-    padding: 10px; /* Ajout d'un padding pour une meilleure lisibilité */
+  .filtres2 a {
+    min-width: 35%;
   }
 
-  .populaires-title {
-    flex-direction: column; /* Les éléments passent en colonne */
-    align-items: flex-start; /* Aligne le titre et l'icône à gauche */
-    gap: 10px; /* Ajout d'un espacement entre les éléments */
+  .filtre2 {
+    display: flex;
+    flex-direction: column; /* Colonne pour le titre */
+    align-items: center;
+  }
+
+  .filtre2 h4 {
+    margin-bottom: 20px; /* Espace sous le titre */
+  }
+
+  /* Utiliser une grille pour les liens */
+  .filtre2 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 10px;
+    border: 1px solid #ddd; /* Optionnel : bordures pour la lisibilité */
+    border-radius: 15px;
+  }
+
+  /* Grille spécifique pour les liens */
+  .filtre2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    gap: 10px; /* Espacement entre les éléments */
+  }
+
+  .filtre2 h4 {
+    grid-column: span 2; /* Le titre occupe toute la largeur */
+  }
+
+  .filtre2 h4 {
+    margin-bottom: 20px; /* Espace sous le titre */
+  }
+
+  .search_button {
+    display: none;
+  }
+  .loupe {
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: medium;
+    border-radius: 0 20px 20px 0;
+    background-color: #0065fc;
+  }
+  i .fa-solid .fa-magnifying-glass {
+    display: flex;
+    width: 50px;
+    height: 49px;
+    border-radius: 0 50% 50% 0;
+    justify-content: center;
+    margin-right: 9px;
+    font-size: medium;
+    color: white;
+  }
+  .hebergements-and-populaires {
+    display: flex;
+    width: 365px;
+    flex-direction: column-reverse;
   }
 
   .populaires-cards {
     display: flex;
     flex-direction: column; /* Empile les cartes verticalement */
-    gap: 20px; /* Ajoute de l'espacement entre les cartes */
   }
-
-  .populaires-cards .card {
-    flex-direction: column; /* Chaque carte est en colonne */
-    align-items: center; /* Centrer le contenu de chaque carte */
+  .populaires-cards a {
+    width: 100%;
   }
-
   .populaires-cards img {
-    width: 100%; /* L'image occupe toute la largeur disponible */
-    height: auto; /* Maintient les proportions de l'image */
-    border-radius: 15px; /* Coins légèrement arrondis */
+    border-radius: 15px 0 0 15px;
   }
-
-  .populaires-cards .card-content {
-    width: 100%; /* Le contenu occupe toute la largeur */
-    padding: 10px; /* Ajoute un espacement interne */
-    text-align: center; /* Centrer le texte pour une meilleure présentation */
-  }
-
   .populaires-cards .card-title {
-    font-size: 1.2rem; /* Réduit légèrement la taille du titre */
+    font-size: 1rem; /* Réduit légèrement la taille du titre */
     margin: 10px 0; /* Ajoute de l'espace autour du titre */
   }
 
@@ -396,19 +482,25 @@ i.fa-solid.fa-location-dot {
     font-size: 1rem; /* Ajuste la taille pour une lecture facile */
     margin-bottom: 10px; /* Espacement sous le sous-titre */
   }
-
-  .populaires-cards .card-rating {
-    margin-top: 10px; /* Espace au-dessus des étoiles */
-  }
   .hebergements-cards {
     justify-content: center;
+    width: 300px;
+  }
+  .hebergements-cards img {
+    width: 300px;
   }
   .Activites-cards {
     display: flex;
     flex-direction: column;
+    width: 365px;
+  }
+  .Activites-cards a {
+    max-width: 100%;
+    height: auto;
   }
   .footer {
     display: flex;
     flex-direction: column;
+    padding-left: 20px;
   }
 }
