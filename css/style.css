@@ -71,7 +71,7 @@ a {
 
 .icon i {
   color: #0065fc;
-  font-size: 14px; /* Taille de l'icône */
+  font-size: 14px;
 }
 
 .section-title {
@@ -321,15 +321,15 @@ i.fa-solid.fa-location-dot {
 
   .Activites-cards a {
     flex: 1 1 calc(25% - 15px); /* Chaque carte occupe 25% de la largeur moins le gap */
-    max-width: 25%; /* Empêche les cartes de dépasser 25% */
-    text-align: center; /* Centrer le contenu textuel */
+    max-width: 25%;
+    text-align: center;
   }
 
   .Activites-cards img {
-    width: 100%; /* Les images remplissent la largeur de leurs conteneurs */
+    width: 100%;
     height: 250px; /* Fixer une hauteur identique pour toutes les images */
     object-fit: cover; /* Recadre l'image pour qu'elle remplisse le conteneur */
-    border-radius: 10px; /* Coins arrondis pour l’esthétique */
+    border-radius: 10px;
   }
   .Activites-cards article.card {
     height: 312px;
@@ -408,8 +408,6 @@ i.fa-solid.fa-location-dot {
   .filtre2 h4 {
     margin-bottom: 20px; /* Espace sous le titre */
   }
-
-  /* Utiliser une grille pour les liens */
   .filtre2 a {
     display: flex;
     justify-content: center;
@@ -420,8 +418,6 @@ i.fa-solid.fa-location-dot {
     border: 1px solid #ddd; /* Optionnel : bordures pour la lisibilité */
     border-radius: 15px;
   }
-
-  /* Grille spécifique pour les liens */
   .filtre2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
