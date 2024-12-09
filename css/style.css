@@ -30,22 +30,23 @@ header {
   justify-content: space-between;
 }
 header li a:hover {
-  border-top: solid 1px blue;
+  border-top: solid 2px #0065fc;
   padding-top: 10px;
-  color: blue;
+  color: #0065fc;
 }
 header ul {
   display: flex;
   gap: 20px;
   border-top: #0065fc;
   list-style: none;
+  margin-top: 6px;
 }
 header img {
   display: flex;
-  height: 59.05px;
-  width: 189.55px;
+  height: 59px;
+  width: 189px;
   top: 134px;
-  left: 77.56px;
+  left: 77px;
 }
 /*----FIN HEADER-----*/
 a {
@@ -160,6 +161,9 @@ i.fa-solid.fa-location-dot {
   gap: 6px;
   align-items: center;
 }
+.filtre2 h2 {
+  font-size: 18px;
+}
 .filtre2 a {
   display: flex;
   border: solid 2px rgb(190, 188, 188);
@@ -195,6 +199,10 @@ i.fa-solid.fa-location-dot {
   height: 124px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+*/ .hebergements-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 /****** Populaires ***********/
@@ -252,6 +260,9 @@ i.fa-solid.fa-location-dot {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
+.Activites-cards .card {
+  padding: 0 0 5px;
+}
 .Activites-cards a {
   margin-bottom: 30px;
   min-height: 270px;
@@ -263,7 +274,9 @@ i.fa-solid.fa-location-dot {
   flex-direction: row;
   margin-top: 35px;
 }
-
+.Activites-cards .card-title {
+  padding-left: 20px;
+}
 .Activites h2 {
   margin: 20px 0 -10px 20px;
 }
@@ -284,9 +297,22 @@ i.fa-solid.fa-location-dot {
   .hebergements-and-populaires {
     flex-direction: column;
   }
+  .filtre2 a {
+    font-size: 0.9rem;
+  }
 
   .hebergements {
     width: 100%;
+  }
+  .hebergements-cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .hebergements-cards img {
+    width: 100%;
+  }
+  .hebergements-cards a {
+    width: 30%;
   }
 
   .populaires {
@@ -315,14 +341,11 @@ i.fa-solid.fa-location-dot {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    overflow-x: auto; /* Ajouter un défilement horizontal si nécessaire */
     gap: 15px; /* Ajouter un espacement entre les cartes */
   }
 
   .Activites-cards a {
     flex: 1 1 calc(25% - 15px); /* Chaque carte occupe 25% de la largeur moins le gap */
-    max-width: 25%;
-    text-align: center;
   }
 
   .Activites-cards img {
@@ -344,16 +367,14 @@ i.fa-solid.fa-location-dot {
     font-size: 1rem; /* Réduire légèrement la taille des titres */
     margin-top: 10px; /* Ajouter un peu d’espace au-dessus */
   }
-  h3 .card-title {
-    display: flex;
-    padding-bottom: 18px;
-  }
 }
 
 /* ----------------Small devices (phones, less than 768px)------PHONES---------------- */
 @media (max-width: 767.98px) {
   .main-container {
-    padding: 15px;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0 0 0 16px;
   }
   header {
     display: flex;
@@ -363,12 +384,13 @@ i.fa-solid.fa-location-dot {
   .nav-menu ul {
     width: 100%;
     padding: 0;
-    gap: 190px;
+    margin: 0;
+    gap: 40px;
   }
-  .nav-menu li {
-    padding-bottom: 16px;
-    width: 50%;
+  .nav-menu {
+    border-bottom: 2px solid var(--main-bg-color);
   }
+
   .nav-menu li :hover {
     border-bottom: 2px solid var(--main-color);
     border-top: none;
@@ -424,11 +446,11 @@ i.fa-solid.fa-location-dot {
     gap: 10px; /* Espacement entre les éléments */
   }
 
-  .filtre2 h4 {
+  .filtre2 h2 {
     grid-column: span 2; /* Le titre occupe toute la largeur */
   }
 
-  .filtre2 h4 {
+  .filtre2 h2 {
     margin-bottom: 20px; /* Espace sous le titre */
   }
 
@@ -470,7 +492,7 @@ i.fa-solid.fa-location-dot {
     border-radius: 15px 0 0 15px;
   }
   .populaires-cards .card-title {
-    font-size: 1rem; /* Réduit légèrement la taille du titre */
+    font-size: 1rem;
     margin: 10px 0; /* Ajoute de l'espace autour du titre */
   }
 
@@ -481,6 +503,9 @@ i.fa-solid.fa-location-dot {
   .hebergements-cards {
     justify-content: center;
     width: 300px;
+  }
+  .hebergements-cards a {
+    width: 100%;
   }
   .hebergements-cards img {
     width: 300px;
@@ -496,6 +521,7 @@ i.fa-solid.fa-location-dot {
   }
   .footer {
     display: flex;
+    width: 375px;
     flex-direction: column;
     padding-left: 20px;
   }
