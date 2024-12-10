@@ -308,11 +308,20 @@ i.fa-solid.fa-location-dot {
     display: flex;
     flex-wrap: wrap;
   }
+  .hebergements-cards .card {
+    width: 100%;
+  }
   .hebergements-cards img {
     width: 100%;
   }
   .hebergements-cards a {
     width: 30%;
+  }
+  .hebergements-cards .card-title {
+    margin: 5px;
+  }
+  .hebergements-cards .card-subtitle {
+    margin: 0;
   }
 
   .populaires {
@@ -374,7 +383,7 @@ i.fa-solid.fa-location-dot {
   .main-container {
     overflow-x: hidden;
     margin: 0;
-    padding: 0 0 0 16px;
+    padding: 0;
   }
   header {
     display: flex;
@@ -388,7 +397,13 @@ i.fa-solid.fa-location-dot {
     gap: 40px;
   }
   .nav-menu {
+    width: 375px;
     border-bottom: 2px solid var(--main-bg-color);
+    padding-top: 25px;
+  }
+  .nav-menu li {
+    width: 50%;
+    text-align: center;
   }
 
   .nav-menu li :hover {
@@ -475,10 +490,15 @@ i.fa-solid.fa-location-dot {
     font-size: medium;
     color: white;
   }
+  /*----------------------------PHONES HEBERG POPU----------*/
   .hebergements-and-populaires {
     display: flex;
-    width: 365px;
+    width: 100%;
     flex-direction: column-reverse;
+    background-color: white;
+  }
+  .populaires {
+    background-color: var(--main-bg-color);
   }
 
   .populaires-cards {
@@ -498,17 +518,14 @@ i.fa-solid.fa-location-dot {
 
   .populaires-cards .card-subtitle {
     font-size: 1rem; /* Ajuste la taille pour une lecture facile */
-    margin-bottom: 10px; /* Espacement sous le sous-titre */
+    /*margin-bottom: 10px;  Espacement sous le sous-titre */
   }
-  .hebergements-cards {
-    justify-content: center;
-    width: 300px;
-  }
+
   .hebergements-cards a {
     width: 100%;
   }
   .hebergements-cards img {
-    width: 300px;
+    width: 100%;
   }
   .Activites-cards {
     display: flex;
@@ -521,7 +538,7 @@ i.fa-solid.fa-location-dot {
   }
   .footer {
     display: flex;
-    width: 375px;
+    width: 100%;
     flex-direction: column;
     padding-left: 20px;
   }
