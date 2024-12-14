@@ -2,7 +2,6 @@
 * {
   font-family: "Raleway", sans-serif;
 }
-
 :root {
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
@@ -161,6 +160,10 @@ i.fa-solid.fa-location-dot {
   gap: 6px;
   align-items: center;
 }
+.filtre2-liens {
+  display: flex;
+  gap: 15px;
+}
 .filtre2 h2 {
   font-size: 18px;
 }
@@ -255,7 +258,7 @@ i.fa-solid.fa-location-dot {
 /*------ACTIVITEES----------*/
 .Activites-cards img {
   display: flex;
-  width: 297px;
+  width: 100%;
   height: 439px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -266,6 +269,7 @@ i.fa-solid.fa-location-dot {
 .Activites-cards a {
   margin-bottom: 30px;
   min-height: 270px;
+  width: 23%;
 }
 .Activites-cards {
   display: flex;
@@ -297,8 +301,18 @@ i.fa-solid.fa-location-dot {
   .hebergements-and-populaires {
     flex-direction: column;
   }
-  .filtre2 a {
-    font-size: 0.9rem;
+
+  /* La classe .filtre2 passe en mode colonne */
+  .filtre2 {
+    display: flex;
+    flex-direction: column; /* Le titre passe au-dessus */
+    align-items: flex-start; /* Les éléments alignés à gauche */
+  }
+
+  /* Réorganiser les liens horizontalement */
+  .filtre2 {
+    flex-wrap: wrap; /* Permet de regrouper les liens horizontalement */
+    justify-content: flex-start; /* Alignement à gauche */
   }
 
   .hebergements {
@@ -350,7 +364,7 @@ i.fa-solid.fa-location-dot {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 15px; /* Ajouter un espacement entre les cartes */
+    gap: 15px;
   }
 
   .Activites-cards a {
@@ -381,7 +395,6 @@ i.fa-solid.fa-location-dot {
 /* ----------------Small devices (phones, less than 768px)------PHONES---------------- */
 @media (max-width: 767.98px) {
   .main-container {
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
   }
@@ -397,7 +410,7 @@ i.fa-solid.fa-location-dot {
     gap: 40px;
   }
   .nav-menu {
-    width: 375px;
+    width: 100%;
     border-bottom: 2px solid var(--main-bg-color);
     padding-top: 25px;
   }
@@ -406,7 +419,7 @@ i.fa-solid.fa-location-dot {
     text-align: center;
   }
 
-  .nav-menu li :hover {
+  .nav-menu ul :hover {
     border-bottom: 2px solid var(--main-color);
     border-top: none;
   }
@@ -438,12 +451,12 @@ i.fa-solid.fa-location-dot {
 
   .filtre2 {
     display: flex;
-    flex-direction: column; /* Colonne pour le titre */
-    align-items: center;
+    flex-direction: column;
   }
 
-  .filtre2 h4 {
+  .filtre2 h2 {
     margin-bottom: 20px; /* Espace sous le titre */
+    justify-content: flex-start;
   }
   .filtre2 a {
     display: flex;
@@ -455,17 +468,14 @@ i.fa-solid.fa-location-dot {
     border: 1px solid #ddd; /* Optionnel : bordures pour la lisibilité */
     border-radius: 15px;
   }
-  .filtre2 {
+  .filtre2-liens {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
-    gap: 10px; /* Espacement entre les éléments */
+    gap: 10px 30px;
   }
 
   .filtre2 h2 {
     grid-column: span 2; /* Le titre occupe toute la largeur */
-  }
-
-  .filtre2 h2 {
     margin-bottom: 20px; /* Espace sous le titre */
   }
 
@@ -530,16 +540,14 @@ i.fa-solid.fa-location-dot {
   .Activites-cards {
     display: flex;
     flex-direction: column;
-    width: 365px;
   }
   .Activites-cards a {
-    max-width: 100%;
+    width: 100%;
     height: auto;
   }
   .footer {
     display: flex;
     width: 100%;
     flex-direction: column;
-    padding-left: 20px;
   }
 }
